@@ -1,0 +1,126 @@
+.banner {
+  background-image: linear-gradient(to right, #635dc0, #3027ae);
+  background-image: url("../../images//frontEcommerce.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 89vmin;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  h1 {
+    margin: 5vmax;
+    font: 600 2.5vmax "Roboto";
+  }
+  p {
+    font: 300 1.4vmax "Lucida Sans";
+    margin-top: -5vmax;
+  }
+  a > button {
+    margin-bottom: 5vmax;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 0;
+    padding: 1vmax;
+    transition: all 0.5s;
+    width: 9vmax;
+    font: 500 1vmax "Roboto";
+    &:hover {
+      background-color: transparent;
+      color: white;
+    }
+  }
+  &::after {
+    content: "";
+    width: 100vw;
+    height: 89vmin;
+    clip-path: polygon(100% 68%, 0% 100%, 100% 100%);
+    background: #ffffff;
+    // left: 0%;
+    max-width: 100%;
+    position: absolute;
+  }
+}
+.cartContainer {
+  display: flex;
+  margin: 2vmax auto;
+  width: 80vw;
+  flex-wrap: wrap;
+  max-width: 100%;
+  justify-content: space-evenly;
+  overflow-x: auto;
+}
+.homeHeading {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1.4vmax;
+  border-bottom: 1px solid rgba(21, 21, 21, 0.5);
+  width: 20vmax;
+  padding: 1vmax;
+  margin: 5vmax auto;
+}
+
+.productCard {
+  height: 30vmax;
+  width: 14vmax;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  margin: 2vmax;
+  transition: all 0.5s;
+  // padding-bottom: 0.5vmax;
+  border: 1px solid transparent;
+  padding: 1vmax;
+  > img {
+    width: 14vmax;
+  }
+  > div {
+    margin: 0.5vmax;
+    display: flex;
+    justify-content: flex-start;
+    > span {
+      margin: 0.5vmax;
+      font: 300 0.7vmax "Roboto";
+    }
+    > p {
+      font-family: "Roboto";
+      font-size: 1.2vmax;
+      margin: 1vmax 0.5vmax;
+      margin-bottom: 0;
+    }
+  }
+  > span {
+    margin: 0.5vmax;
+    color: tomato;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 1vmax;
+  }
+  
+  &:hover {
+    box-shadow: 0 0 15px rgba(15, 15, 15, 0.544);
+    transform: translateY(-1vmax);
+    border: 1px groove rgba(51, 49, 49, 0.741);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .productCard > p {
+    font-size: 1.7vmax;
+    > div {
+      margin: 0vmax;
+      display: block;
+      > span {
+        font: 300 1vmax "Roboto";
+        margin: 0 0.5vmax;
+      }
+    }
+    > span {
+      font-size: 1.5vmax;
+    }
+  }
+}
